@@ -1,0 +1,5 @@
+[
+  { "symbol": "H", "name": "Hydrogen", "atomicNumber": 1 },
+  { "symbol": "He", "name": "Helium", "atomicNumber": 2 },
+  { "symbol": "Li", "name": "Lithium", "atomicNumber": 3 }
+]
