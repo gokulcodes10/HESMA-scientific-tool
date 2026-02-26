@@ -15,7 +15,6 @@ import com.smac.demo.service.AlloyService;
 
 @RestController
 @RequestMapping("/api/alloy")
-@CrossOrigin(origins = "http://localhost:5174")
 public class AlloyController {
 
     @Autowired
