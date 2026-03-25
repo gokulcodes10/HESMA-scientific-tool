@@ -1,17 +1,18 @@
-import React from "react";
-
-function ElementCard({ element, onSelect, isSelected }) {
+// components/ElementCard.jsx
+export default function ElementCard({ element, isSelected, onClick }) {
   return (
     <div
-      className={`card text-center p-2 m-2 shadow-sm 
-        ${isSelected ? "border border-danger border-3" : ""}`}
-      style={{ width: "70px", cursor: "pointer" }}
-      onClick={() => onSelect(element)}
+      className={`element-card ${isSelected ? "selected" : ""}`}
+      onClick={onClick}
+      style={{
+        // Brilliant use of dynamic grid positioning!
+        gridColumn: element.group, 
+        gridRow: element.period
+      }}
     >
-      <h6>{element.symbol}</h6>
-      <small>{element.atomicNumber}</small>
+      <div className="atomic-number">{element.atomicNumber}</div>
+      <div className="symbol">{element.symbol}</div>
+      <div className="element-name">{element.name}</div>
     </div>
   );
 }
-
-export default ElementCard;
